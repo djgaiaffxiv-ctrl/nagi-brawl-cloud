@@ -209,6 +209,21 @@ function renderPonde() {
 
 document.querySelector('.tabs').addEventListener('click', function (e) { var b = e.target.closest('.tab'); if (b) show(b.dataset.tab); });
 $('switch').addEventListener('click', function (e) { var b = e.target.closest('.sw'); if (b) setAccount(b.dataset.tag); });
-if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js').catch(function () {}); }
+
+// Botón Actualizar: refresca datos de la nube + comprueba versión nueva de la app.
+var swReg = null, reloading = false;
+function doRefresh() {
+  var b = $('refresh'); if (b) b.classList.add('spin');
+  boot();
+  if (swReg && swReg.update) { try { swReg.update(); } catch (e) {} }
+  setTimeout(function () { if (b) b.classList.remove('spin'); }, 1100);
+}
+$('refresh').addEventListener('click', doRefresh);
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(function (r) { swReg = r; }).catch(function () {});
+  // Cuando entra una versión nueva de la app, recargar para aplicarla (auto-actualización).
+  navigator.serviceWorker.addEventListener('controllerchange', function () { if (reloading) return; reloading = true; location.reload(); });
+}
 boot();
-setInterval(boot, 120000); // refresca de la nube cada 2 min
+setInterval(function () { boot(); if (swReg && swReg.update) { try { swReg.update(); } catch (e) {} } }, 120000); // cada 2 min: datos + comprobar versión
