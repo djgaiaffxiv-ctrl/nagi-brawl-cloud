@@ -61,7 +61,7 @@ function mergeInto(map, key, records) {
     }
   });
   all.sort(function (a, b) { return (b.time || '').localeCompare(a.time || ''); });
-  map[key] = all.slice(0, 8000);
+  map[key] = all.slice(0, 50000);
 }
 
 (async function () {
