@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0b0a12" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+  <title>NAGI BRAWL</title>
+</head>
+<body>
+  <!-- Pantalla "gira el móvil" (solo en vertical) -->
+  <div id="rotate">
+    <div class="rotate-inner">
+      <div class="phone"><span class="phone-screen"></span><span class="phone-cam"></span></div>
+      <div class="rotate-txt">Gira el móvil</div>
+      <div class="rotate-opt">APP OPTIMIZADA PARA FORMATO 16:9</div>
+    </div>
+    <div class="rotate-credit">★ NAGI BRAWL</div>
+  </div>
+
+  <!-- App (solo en horizontal) -->
+  <div id="app">
+    <header class="topbar">
+      <div class="brand"><img class="logo" src="icon-192.png" alt="" /><span>NAGI <b>BRAWL</b></span></div>
+      <div class="pstrip" id="pstrip"></div>
+      <div class="updated" id="updated"></div>
+    </header>
+    <nav class="tabs">
+      <button class="tab active" data-tab="brawlers">🏆 Brawlers</button>
+      <button class="tab" data-tab="history">📜 Historial</button>
+      <button class="tab" data-tab="ponde">👑 PONDE</button>
+    </nav>
+    <main id="view" class="view"><div class="loading">Cargando datos de la nube…</div></main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

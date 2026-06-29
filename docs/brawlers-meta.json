@@ -1,0 +1,527 @@
+{
+    "16000073":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Chuck"
+                 },
+    "16000047":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Squeak"
+                 },
+    "16000009":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Dynamike"
+                 },
+    "16000021":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Gene"
+                 },
+    "16000070":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Cordelius"
+                 },
+    "16000083":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Clancy"
+                 },
+    "16000106":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Bolt"
+                 },
+    "16000005":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Spike"
+                 },
+    "16000103":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Najia"
+                 },
+    "16000100":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Gigi"
+                 },
+    "16000036":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Nani"
+                 },
+    "16000099":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Pierce"
+                 },
+    "16000096":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Trunk"
+                 },
+    "16000069":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Hank"
+                 },
+    "16000020":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Frank"
+                 },
+    "16000035":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Gale"
+                 },
+    "16000042":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Byron"
+                 },
+    "16000004":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Rico"
+                 },
+    "16000041":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Lou"
+                 },
+    "16000065":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Mandy"
+                 },
+    "16000026":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Bibi"
+                 },
+    "16000031":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Mr. P"
+                 },
+    "16000068":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Maisie"
+                 },
+    "16000089":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Meeple"
+                 },
+    "16000032":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Max"
+                 },
+    "16000084":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Moe"
+                 },
+    "16000091":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Lumi"
+                 },
+    "16000000":  {
+                     "color":  "#b9eaff",
+                     "rarity":  "Common",
+                     "name":  "Shelly"
+                 },
+    "16000034":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Jacky"
+                 },
+    "16000022":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Tick"
+                 },
+    "16000010":  {
+                     "color":  "#68fd58",
+                     "rarity":  "Rare",
+                     "name":  "El Primo"
+                 },
+    "16000040":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Amber"
+                 },
+    "16000038":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Surge"
+                 },
+    "16000082":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Berry"
+                 },
+    "16000039":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Colette"
+                 },
+    "16000051":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Ash"
+                 },
+    "16000081":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Lily"
+                 },
+    "16000052":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Meg"
+                 },
+    "16000063":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Chester"
+                 },
+    "16000037":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Sprout"
+                 },
+    "16000077":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Larry \u0026 Lawrie"
+                 },
+    "16000078":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Melodie"
+                 },
+    "16000097":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Mina"
+                 },
+    "16000094":  {
+                     "color":  "#e1fb2a",
+                     "rarity":  "Ultra Legendary",
+                     "name":  "Kaze"
+                 },
+    "16000018":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Darryl"
+                 },
+    "16000013":  {
+                     "color":  "#68fd58",
+                     "rarity":  "Rare",
+                     "name":  "Poco"
+                 },
+    "16000015":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Piper"
+                 },
+    "16000030":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Emz"
+                 },
+    "16000064":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Gray"
+                 },
+    "16000006":  {
+                     "color":  "#68fd58",
+                     "rarity":  "Rare",
+                     "name":  "Barley"
+                 },
+    "16000056":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Eve"
+                 },
+    "16000067":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Willow"
+                 },
+    "16000008":  {
+                     "color":  "#68fd58",
+                     "rarity":  "Rare",
+                     "name":  "Nita"
+                 },
+    "16000058":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Bonnie"
+                 },
+    "16000046":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Belle"
+                 },
+    "16000045":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Stu"
+                 },
+    "16000059":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Otis"
+                 },
+    "16000011":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Mortis"
+                 },
+    "16000048":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Grom"
+                 },
+    "16000007":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Jessie"
+                 },
+    "16000104":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Damian"
+                 },
+    "16000029":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Bea"
+                 },
+    "16000101":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Glowy"
+                 },
+    "16000003":  {
+                     "color":  "#68fd58",
+                     "rarity":  "Rare",
+                     "name":  "Brock"
+                 },
+    "16000053":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Lola"
+                 },
+    "16000062":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Buster"
+                 },
+    "16000074":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Charlie"
+                 },
+    "16000079":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Angelo"
+                 },
+    "16000098":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Ziggy"
+                 },
+    "16000095":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Alli"
+                 },
+    "16000019":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Penny"
+                 },
+    "16000024":  {
+                     "color":  "#68fd58",
+                     "rarity":  "Rare",
+                     "name":  "Rosa"
+                 },
+    "16000016":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Pam"
+                 },
+    "16000027":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "8-Bit"
+                 },
+    "16000088":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Buzz Lightyear"
+                 },
+    "16000090":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Ollie"
+                 },
+    "16000087":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Juju"
+                 },
+    "16000092":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Finx"
+                 },
+    "16000080":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Draco"
+                 },
+    "16000093":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Jae-Yong"
+                 },
+    "16000071":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Doug"
+                 },
+    "16000072":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Pearl"
+                 },
+    "16000044":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Ruffs"
+                 },
+    "16000012":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Crow"
+                 },
+    "16000023":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Leon"
+                 },
+    "16000105":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Starr Nova"
+                 },
+    "16000102":  {
+                     "color":  "#e1fb2a",
+                     "rarity":  "Ultra Legendary",
+                     "name":  "Sirius"
+                 },
+    "16000061":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Gus"
+                 },
+    "16000001":  {
+                     "color":  "#68fd58",
+                     "rarity":  "Rare",
+                     "name":  "Colt"
+                 },
+    "16000075":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Mico"
+                 },
+    "16000076":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Kit"
+                 },
+    "16000025":  {
+                     "color":  "#5ab3ff",
+                     "rarity":  "Super Rare",
+                     "name":  "Carl"
+                 },
+    "16000028":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Sandy"
+                 },
+    "16000049":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Buzz"
+                 },
+    "16000043":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Edgar"
+                 },
+    "16000017":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Tara"
+                 },
+    "16000057":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Janet"
+                 },
+    "16000066":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "R-T"
+                 },
+    "16000014":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Bo"
+                 },
+    "16000054":  {
+                     "color":  "#fe5e72",
+                     "rarity":  "Mythic",
+                     "name":  "Fang"
+                 },
+    "16000060":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Sam"
+                 },
+    "16000086":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Shade"
+                 },
+    "16000050":  {
+                     "color":  "#d850ff",
+                     "rarity":  "Epic",
+                     "name":  "Griff"
+                 },
+    "16000085":  {
+                     "color":  "#fff11ev",
+                     "rarity":  "Legendary",
+                     "name":  "Kenji"
+                 },
+    "16000002":  {
+                     "color":  "#68fd58",
+                     "rarity":  "Rare",
+                     "name":  "Bull"
+                 }
+}
