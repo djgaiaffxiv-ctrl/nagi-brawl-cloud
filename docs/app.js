@@ -167,7 +167,7 @@ function renderHistory() {
         '<div class="hmid"><div class="hmode">' + esc(prettyMode(r.mode)) + '</div><div class="hmap">' + esc(r.map || '') + '</div></div>' +
         '<div class="hverdict ' + c.cls + '">' + c.txt + (typeof tc === 'number' ? ' <span class="hv-chg">' + (tc > 0 ? '+' : '') + tc + '</span>' : '') + '</div>' +
         '<span class="htot">' + (r.trophies != null ? '🏆 ' + fmt(r.trophies) : '') + '</span>' +
-        '<span class="htime">' + (t ? t.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' }) : '') + '</span>' +
+        '<span class="htime">' + (t ? '<b>' + t.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' }) + '</b><small>' + t.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: '2-digit' }) + '</small>' : '') + '</span>' +
         '</div>' + teamsLine(r, meTag) + '</div>';
     });
   });
