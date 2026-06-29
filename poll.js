@@ -7,6 +7,7 @@ const path = require('path');
 const PROXY = 'https://bsproxy.royaleapi.dev/v1';
 const FILE = path.join(__dirname, 'data', 'battles.json');
 const PROFILE_FILE = path.join(__dirname, 'data', 'profile.json');
+const CLUB_FILE = path.join(__dirname, 'data', 'club.json');
 
 function cleanTag(t) { return String(t || '').toUpperCase().replace(/[^0-9A-Z]/g, '').replace(/^#/, ''); }
 function normTag(t) { return String(t || '').replace(/[^0-9A-Za-z]/g, '').toUpperCase(); }
@@ -82,12 +83,26 @@ async function fetchProfile(t, token) {
 function loadProfiles() { try { return JSON.parse(fs.readFileSync(PROFILE_FILE, 'utf8')); } catch (e) { return {}; } }
 function saveProfiles(m) { fs.mkdirSync(path.dirname(PROFILE_FILE), { recursive: true }); fs.writeFileSync(PROFILE_FILE, JSON.stringify(m)); }
 
+async function fetchClub(clubTag, token) {
+  const t = cleanTag(clubTag);
+  if (!t) return null;
+  const res = await fetch(PROXY + '/clubs/%23' + t, { headers: { Authorization: 'Bearer ' + token, Accept: 'application/json' } });
+  if (!res.ok) return null;
+  const d = await res.json();
+  return {
+    name: d.name, tag: d.tag, trophies: d.trophies, requiredTrophies: d.requiredTrophies, type: d.type,
+    members: (d.members || []).map(function (m) { return { tag: m.tag, name: m.name, role: m.role, trophies: m.trophies, icon: (m.icon && m.icon.id) || null }; }),
+    updated: new Date().toISOString()
+  };
+}
+
 (async function () {
   const token = process.env.BS_TOKEN;
   const tags = (process.env.BS_TAGS || process.env.BS_TAG || '').split(',').map(function (s) { return s.trim(); }).filter(Boolean);
   if (!token || !tags.length) { console.error('Faltan BS_TOKEN o BS_TAGS'); process.exit(1); }
   const map = load();
   const profiles = loadProfiles();
+  let clubTag = null;
   for (const tag of tags) {
     const t = cleanTag(tag);
     try {
@@ -99,10 +114,16 @@ function saveProfiles(m) { fs.mkdirSync(path.dirname(PROFILE_FILE), { recursive:
         console.log(t + ': ' + recs.length + ' leídas, total acumulado ' + (map[t] ? map[t].length : 0));
       } else { console.error('battlelog HTTP ' + res.status + ' para ' + t); }
       const prof = await fetchProfile(t, token);
-      if (prof) { profiles[t] = prof; console.log(t + ': perfil ' + prof.name + ' (' + prof.trophies + ' copas)'); }
+      if (prof) { profiles[t] = prof; if (!clubTag && prof.clubTag) clubTag = prof.clubTag; console.log(t + ': perfil ' + prof.name + ' (' + prof.trophies + ' copas)'); }
     } catch (e) { console.error('Error ' + t + ': ' + (e.message || e)); }
   }
   save(map);
   saveProfiles(profiles);
+  if (clubTag) {
+    try {
+      const club = await fetchClub(clubTag, token);
+      if (club) { fs.mkdirSync(path.dirname(CLUB_FILE), { recursive: true }); fs.writeFileSync(CLUB_FILE, JSON.stringify(club)); console.log('club ' + club.name + ' (' + club.members.length + ' miembros)'); }
+    } catch (e) { console.error('Error club: ' + (e.message || e)); }
+  }
   console.log('Hecho.');
 })();

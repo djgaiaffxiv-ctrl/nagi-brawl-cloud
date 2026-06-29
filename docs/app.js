@@ -3,7 +3,8 @@
 var RAW = 'https://raw.githubusercontent.com/djgaiaffxiv-ctrl/nagi-brawl-cloud/main/data/';
 var TAG = '9R8PPG822'; // cuenta principal
 
-var meta = {}, profiles = {}, battlesMap = {}, profile = null, battles = [];
+var meta = {}, profiles = {}, battlesMap = {}, club = null, profile = null, battles = [];
+var activeTag = TAG, currentTab = 'brawlers';
 
 var $ = function (id) { return document.getElementById(id); };
 function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
@@ -50,17 +51,35 @@ function boot() {
   Promise.all([
     getJson('brawlers-meta.json').catch(function () { return {}; }),
     getJson(RAW + 'profile.json').catch(function () { return {}; }),
-    getJson(RAW + 'battles.json').catch(function () { return {}; })
+    getJson(RAW + 'battles.json').catch(function () { return {}; }),
+    getJson(RAW + 'club.json').catch(function () { return null; })
   ]).then(function (res) {
-    meta = res[0] || {}; profiles = res[1] || {}; battlesMap = res[2] || {};
-    var tag = profiles[TAG] ? TAG : Object.keys(profiles)[0];
-    profile = tag ? profiles[tag] : null;
-    battles = (battlesMap[tag] || battlesMap[TAG] || []);
-    renderHeader();
-    show('brawlers');
+    meta = res[0] || {}; profiles = res[1] || {}; battlesMap = res[2] || {}; club = res[3] || null;
+    renderSwitch();
+    if (!profiles[activeTag]) activeTag = profiles[TAG] ? TAG : (Object.keys(profiles)[0] || TAG);
+    setAccount(activeTag);
   }).catch(function (e) {
     $('view').innerHTML = '<div class="loading err">No se pudo cargar la nube: ' + esc(e.message) + '</div>';
   });
+}
+
+function setAccount(tag) {
+  activeTag = tag;
+  profile = profiles[tag] || null;
+  battles = battlesMap[tag] || [];
+  renderHeader();
+  renderSwitch();
+  show(currentTab);
+}
+
+function renderSwitch() {
+  var keys = Object.keys(profiles);
+  if (keys.length < 2) { $('switch').innerHTML = ''; return; }
+  $('switch').innerHTML = keys.map(function (k) {
+    var p = profiles[k];
+    return '<button class="sw' + (k === activeTag ? ' active' : '') + '" data-tag="' + esc(k) + '">' +
+      '<img src="' + iconUrl(p.icon) + '"/><span>' + esc((p.name || k).slice(0, 10)) + '</span></button>';
+  }).join('');
 }
 
 function renderHeader() {
@@ -76,10 +95,32 @@ function renderHeader() {
 
 // ---------- Vistas ----------
 function show(tab) {
+  currentTab = tab;
   var btns = document.querySelectorAll('.tab'); for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('active', btns[i].dataset.tab === tab);
   if (tab === 'brawlers') renderBrawlers();
   else if (tab === 'history') renderHistory();
   else if (tab === 'ponde') renderPonde();
+  else if (tab === 'club') renderClub();
+}
+
+var ROLE_ES = { president: 'Líder', vicePresident: 'Vicepresidente', senior: 'Sénior', member: 'Miembro' };
+var GOLD_NAMES = { polloinflado: 1, salmonprimavera: 1 };
+function renderClub() {
+  if (!club || !club.members) { $('view').innerHTML = '<div class="loading">El club aún no está en la nube (espera al próximo sondeo).</div>'; return; }
+  var members = club.members.slice().sort(function (a, b) { return b.trophies - a.trophies; });
+  var rows = members.map(function (m, i) {
+    var gold = GOLD_NAMES[normName(m.name)] ? ' gold' : '';
+    return '<div class="crow' + gold + '"><span class="crank">' + (i + 1) + '</span>' +
+      '<img class="cphoto" loading="lazy" src="' + iconUrl(m.icon) + '"/>' +
+      '<div class="cmain"><span class="cname">' + esc(m.name) + '</span><span class="crole">' + esc(ROLE_ES[m.role] || m.role || '') + '</span></div>' +
+      '<span class="ctro">' + fmt(m.trophies) + ' 🏆</span></div>';
+  }).join('');
+  $('view').innerHTML =
+    '<div class="summary"><div class="stat accent"><div class="stat-num">' + fmt(club.trophies) + '</div><div class="stat-lbl">Copas club</div></div>' +
+    '<div class="stat"><div class="stat-num">' + members.length + '</div><div class="stat-lbl">Miembros</div></div>' +
+    '<div class="stat"><div class="stat-num">' + fmt(club.requiredTrophies || 0) + '</div><div class="stat-lbl">Entrada</div></div>' +
+    '<div class="stat"><div class="stat-num" style="font-size:15px">' + esc(club.name || '') + '</div><div class="stat-lbl">Club</div></div></div>' +
+    '<div class="clublist">' + rows + '</div>';
 }
 
 function renderBrawlers() {
@@ -167,6 +208,7 @@ function renderPonde() {
 }
 
 document.querySelector('.tabs').addEventListener('click', function (e) { var b = e.target.closest('.tab'); if (b) show(b.dataset.tab); });
+$('switch').addEventListener('click', function (e) { var b = e.target.closest('.sw'); if (b) setAccount(b.dataset.tag); });
 if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js').catch(function () {}); }
 boot();
 setInterval(boot, 120000); // refresca de la nube cada 2 min
