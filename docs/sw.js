@@ -1,6 +1,6 @@
 // Service worker básico: cachea el "esqueleto" para que abra rápido/offline.
 // Los datos (battles/profile) siempre van por red (no se cachean).
-var CACHE = 'nagi-brawl-v1';
+var CACHE = 'nagi-brawl-v2';
 var SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'brawlers-meta.json', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', function (e) {
