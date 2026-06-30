@@ -124,6 +124,7 @@ body {
 .hverdict.loss { color: #ff5e6e; text-shadow: 2px 2px 0 #470b15, 0 0 14px rgba(255,94,110,.5); }
 .hverdict.draw { color: #ffd24d; text-shadow: 2px 2px 0 #4a3300; }
 .hv-chg { font-size: 14px; margin-left: 5px; }
+.hv-ranked { -webkit-text-stroke: 0; font-size: 10px; font-style: normal; letter-spacing: 1px; color: #fff; background: linear-gradient(135deg, #7c5cff, #4f3bd6); padding: 2px 7px; border-radius: 6px; margin-left: 5px; vertical-align: 2px; }
 .htot { font-weight: 900; color: var(--gold); font-size: 14px; flex-shrink: 0; }
 .htime { display: flex; flex-direction: column; align-items: flex-end; width: 58px; flex-shrink: 0; line-height: 1.15; }
 .htime b { font-size: 12px; font-weight: 700; color: #cfcce0; }

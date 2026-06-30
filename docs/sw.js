@@ -1,6 +1,6 @@
 // Service worker "red primero": cuando hay internet, SIEMPRE carga lo último
 // (así la app se actualiza sola, sin reinstalar). La caché es solo respaldo offline.
-var CACHE = 'nagi-brawl-v6';
+var CACHE = 'nagi-brawl-v7';
 var SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'brawlers-meta.json', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', function (e) {
