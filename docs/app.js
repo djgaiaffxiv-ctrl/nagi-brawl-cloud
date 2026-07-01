@@ -165,7 +165,7 @@ function renderHistory() {
       html += '<div class="hrow ' + c.cls + '"><div class="htop">' +
         (r.brawlerId != null ? '<img class="hbr" loading="lazy" src="' + portraitUrl(r.brawlerId) + '"/>' : '') +
         '<div class="hmid"><div class="hmode">' + esc(prettyMode(r.mode)) + '</div><div class="hmap">' + esc(r.map || '') + '</div></div>' +
-        '<div class="hverdict ' + c.cls + '">' + c.txt + (typeof tc === 'number' ? ' <span class="hv-chg">' + (tc > 0 ? '+' : '') + tc + '</span>' : (r.result ? ' <span class="hv-ranked">RANKED</span>' : '')) + '</div>' +
+        '<div class="hverdict ' + c.cls + '">' + c.txt + (typeof tc === 'number' ? ' <span class="hv-chg">' + (tc > 0 ? '+' : '') + tc + '</span>' : (r.result ? ' <span class="hv-none" title="Sin cambio de trofeos (desconexión o AFK)">±0</span>' : '')) + '</div>' +
         '<span class="htot">' + (r.trophies != null ? '🏆 ' + fmt(r.trophies) : '') + '</span>' +
         '<span class="htime">' + (t ? '<b>' + t.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' }) + '</b><small>' + t.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: '2-digit' }) + '</small>' : '') + '</span>' +
         '</div>' + teamsLine(r, meTag) + '</div>';
