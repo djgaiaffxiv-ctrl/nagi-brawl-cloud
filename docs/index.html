@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
-  <meta name="theme-color" content="#0b0a12" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="apple-touch-icon" href="icon-192.png" />
-  <link rel="stylesheet" href="style.css" />
-  <title>NAGI BRAWL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0c14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>NAGIBRAWL</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Pantalla "gira el móvil" (solo en vertical) -->
-  <div id="rotate">
-    <div class="rotate-inner">
-      <div class="phone"><span class="phone-screen"></span><span class="phone-cam"></span></div>
-      <div class="rotate-txt">Gira el móvil</div>
-      <div class="rotate-opt">APP OPTIMIZADA PARA FORMATO 16:9</div>
-    </div>
-    <div class="rotate-credit">★ NAGI BRAWL</div>
-  </div>
 
-  <!-- App (solo en horizontal) -->
-  <div id="app">
-    <header class="topbar">
-      <div class="brand"><img class="logo" src="icon-192.png" alt="" /><span>NAGI <b>BRAWL</b></span></div>
-      <div class="pstrip" id="pstrip"></div>
-      <div class="switch" id="switch"></div>
-      <button id="refresh" class="rbtn" title="Actualizar">🔄</button>
-      <div class="updated" id="updated"></div>
-    </header>
-    <nav class="tabs">
-      <button class="tab active" data-tab="brawlers">🏆 Brawlers</button>
-      <button class="tab" data-tab="history">📜 Historial</button>
-      <button class="tab" data-tab="ponde">👑 PONDE</button>
-      <button class="tab" data-tab="club">🛡 Club</button>
-    </nav>
-    <main id="view" class="view"><div class="loading">Cargando datos de la nube…</div></main>
+<header class="top">
+  <img class="logo" src="icon-192.png" alt="">
+  <div class="marca">
+    <b>NAGI<em>BRAWL</em></b>
+    <span id="updated">cargando…</span>
   </div>
+  <span class="credit" data-nagi-credit="1">© 2026 NAGI STUDIOS</span>
+  <button id="btnRefresh" title="Actualizar">↻</button>
+</header>
 
-  <script src="app.js"></script>
+<main id="vista">
+  <div class="loading"><div class="spinner"></div>Cargando datos de la nube…</div>
+</main>
+
+<nav class="tabs">
+  <button class="tab active" data-v="inicio"><svg viewBox="0 0 24 24"><path d="M3.5 11 L12 4 L20.5 11"/><path d="M5.5 9.8 V19.5 H18.5 V9.8"/></svg><span>Inicio</span></button>
+  <button class="tab" data-v="jugadores"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.2" r="3.3"/><path d="M3.2 19.5 C3.2 15.8 5.8 13.9 9 13.9 C12.2 13.9 14.8 15.8 14.8 19.5"/><circle cx="17.2" cy="9.2" r="2.5"/><path d="M16.4 19.5 C16.7 16.4 18.2 15.1 20.8 15.6"/></svg><span>Jugadores</span></button>
+  <button class="tab" data-v="ponde"><svg viewBox="0 0 24 24"><path d="M4.5 18 L4 8 L8.7 11.8 L12 5.5 L15.3 11.8 L20 8 L19.5 18 Z"/><path d="M6 21 H18"/></svg><span>Ponde</span></button>
+  <button class="tab" data-v="tier"><svg viewBox="0 0 24 24"><rect x="3.5" y="11" width="4.6" height="8.5" rx="1"/><rect x="9.7" y="5" width="4.6" height="14.5" rx="1"/><rect x="15.9" y="13.5" width="4.6" height="6" rx="1"/></svg><span>Tier</span></button>
+  <button class="tab" data-v="club"><svg viewBox="0 0 24 24"><path d="M12 3 L20 5.8 V12 C20 16.8 16.6 19.9 12 21.5 C7.4 19.9 4 16.8 4 12 V5.8 Z"/><path d="M8.5 12 L11 14.5 L15.7 9.5"/></svg><span>Club</span></button>
+</nav>
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
 </body>
 </html>

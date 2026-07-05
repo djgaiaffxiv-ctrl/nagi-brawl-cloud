@@ -1,13 +1,12 @@
 {
-  "name": "NAGI BRAWL",
-  "short_name": "NAGI BRAWL",
-  "description": "Tus stats de Brawl Stars, en el móvil. © NAGI STUDIOS",
+  "name": "NAGIBRAWL",
+  "short_name": "NAGIBRAWL",
+  "description": "Ponde Team · Brawl Stars en vivo — © NAGI STUDIOS",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
-  "orientation": "landscape",
-  "background_color": "#0b0a12",
-  "theme_color": "#0b0a12",
+  "background_color": "#0c0c14",
+  "theme_color": "#0c0c14",
   "icons": [
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
